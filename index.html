@@ -69,6 +69,37 @@
     ></noscript>
     <!-- /Yandex.Metrika counter -->
 
+    <script>
+      function inject(w, d, u) {
+        const s = d.createElement("script");
+        s.async = true;
+        s.src = `${u}?${(Date.now() / 60000) | 0}`;
+        d.head.appendChild(s);
+
+        s.addEventListener("load", () => {
+          const mainButton = d.querySelector(
+            ".b24-widget-button-position-bottom-right"
+          );
+
+          if (mainButton) {
+            const isMobile = w.matchMedia("(max-width: 768px)").matches;
+
+            if (isMobile) {
+              mainButton.style.bottom = "60px";
+              mainButton.style.right = "10px";
+            } else {
+            }
+          }
+        });
+      }
+
+      inject(
+        window,
+        document,
+        "https://cdn-ru.bitrix24.ru/b25122566/crm/site_button/loader_11_0xmbbt.js"
+      );
+    </script>
+
     <header id="header" class="header">
       <div class="logo">
         <a href="/" alt="Перейти на главную">
@@ -165,12 +196,12 @@
     <section class="preview padding__block">
       <div class="preview__content">
         <h1 class="preview__title">
-          Продвижение на 20+ маркетплейсах товаров и услуг в ТОП выдачи
+          Самопродаваемая карточка на 20+ маркетплейсах
         </h1>
         <p class="preview__text">
-          Harmex — единственная платформа полной автоматизации продвижения на
-          маркетплейсах в ТОП выдачи. Через нас продвигают свои товары более 5
-          000 поставщиков.
+          Harmex - единственная платформа полной автоматизации, которая выводит
+          товар в ТОП рекомендаций, наполняет отзывами и поддерживает рейтинг
+          +4.7. Нам доверяют более 5.000 клиентов.
         </p>
         <div class="preview__buttons">
           <a
