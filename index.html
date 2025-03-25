@@ -70,35 +70,11 @@
     <!-- /Yandex.Metrika counter -->
 
     <script>
-      function inject(w, d, u) {
-        const s = d.createElement("script");
-        s.async = true;
-        s.src = `${u}?${(Date.now() / 60000) | 0}`;
-        d.head.appendChild(s);
-
-        s.addEventListener("load", () => {
-          const mainButton = d.querySelector(
-            ".b24-widget-button-position-bottom-right"
-          );
-
-          if (mainButton) {
-            const isMobile = w.matchMedia("(max-width: 768px)").matches;
-
-            if (isMobile) {
-              mainButton.style.bottom = "60px";
-              mainButton.style.right = "10px";
-            } else {
-            }
-          }
-        });
-      }
-
-      inject(
-        window,
-        document,
-        "https://cdn-ru.bitrix24.ru/b25122566/crm/site_button/loader_11_0xmbbt.js"
-      );
-    </script>
+      (function(w,d,u){
+              var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+              var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+      })(window,document,'https://cdn-ru.bitrix24.ru/b25122566/crm/site_button/loader_11_0xmbbt.js');
+</script>
 
     <header id="header" class="header">
       <div class="logo">
